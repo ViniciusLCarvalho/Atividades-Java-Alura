@@ -3,16 +3,19 @@ package ProdutoCalculavel;
 public class Livro implements Calculavel {
     private String autor;
     private String titulo;
-    private double preco;
-    
-    public Livro(String autor, String titulo, double preco) {
-        this.autor = autor;
+    private double precoBase;
+    private double desconto;
+
+    public Livro(String titulo, String autor, double precoBase, double desconto){
         this.titulo = titulo;
-        this.preco = preco;
+        this.autor = autor;
+        this.precoBase = precoBase;
+        this.desconto = desconto;
     }
 
     @Override
     public double calcularPrecoFinal(){
-        return preco - (preco * 0.25);
+        return (precoBase * 0.9) - (precoBase * desconto);
     }
 }
+

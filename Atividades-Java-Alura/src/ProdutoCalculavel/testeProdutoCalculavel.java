@@ -2,10 +2,10 @@ package ProdutoCalculavel;
 
 public class testeProdutoCalculavel {
     public static void main(String[] args) {
-        Livro livro = new Livro("Dan Brown", "O Simbolo perdido", 55.85);
-        ProdutoFisico relogio = new ProdutoFisico(370.90, "Smartwatch", "Amazfit");
+        Livro livro = new Livro("Código da Vinci", "Dan Brown", 50.0, 0.05);
+        ProdutoFisico produtoF = new ProdutoFisico("Relogio Amazfit", 370.00, 50.0);
 
+        System.out.println(produtoF.calcularPrecoFinal());
         System.out.println(livro.calcularPrecoFinal());
-        System.out.println(relogio.calcularPrecoFinal());
     }
 }
