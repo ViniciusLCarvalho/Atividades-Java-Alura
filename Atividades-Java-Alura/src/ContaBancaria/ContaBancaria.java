@@ -1,6 +1,20 @@
 package ContaBancaria;
 public class ContaBancaria {
     protected double saldo;
+    protected int conta;
+
+    public ContaBancaria(int conta, double saldo){
+        this.conta = conta;
+        this.saldo = saldo;
+    }
+
+    public int getConta() {
+        return conta;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
 
     public void depositar(double valor) {
         saldo += valor;
