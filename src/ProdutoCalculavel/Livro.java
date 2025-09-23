@@ -13,6 +13,14 @@ public class Livro implements Calculavel {
         this.desconto = desconto;
     }
 
+    public String getAutor() {
+        return autor;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
     @Override
     public double calcularPrecoFinal(){
         return (precoBase * 0.9) - (precoBase * desconto);

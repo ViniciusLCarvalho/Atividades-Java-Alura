@@ -11,6 +11,10 @@ public class ProdutoFisico implements Calculavel {
         this.taxaFrete = taxaFrete;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
     @Override
     public double calcularPrecoFinal(){
         return (precoBase * 1.05) + taxaFrete;
