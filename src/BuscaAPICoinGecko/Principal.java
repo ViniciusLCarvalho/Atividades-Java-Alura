@@ -14,6 +14,12 @@ import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
+/*
+ *  Crie um programa Java que utiliza as classes HttpClient, HttpRequest e HttpResponse 
+ *  para fazer uma consulta à API CoinGecko e exiba a cotação atual de uma criptomoeda 
+ *  escolhida pelo usuário.
+ */
+
 public class Principal {
     public static void main(String[] args)  throws IOException, InterruptedException {
         String chave = null;
