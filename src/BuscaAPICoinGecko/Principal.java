@@ -32,9 +32,11 @@ public class Principal {
         String linha = br.readLine();
 
         while (linha != null) {
-            if(linha.startsWith("x-cg-demo-api-key="))
+            if(linha.startsWith("APIKEYCOINGECKO=")){
                 chave = linha.split("=")[1];
                 break;
+            }
+            linha = br.readLine();
         }
         br.close();
 
