@@ -49,6 +49,8 @@ public class Principal {
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(endereco)).build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
+        in.close();
+
         System.out.println(response.body());
     }
 }

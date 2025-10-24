@@ -41,10 +41,10 @@ public class Principal {
         var receita = URLEncoder.encode(in.nextLine(), StandardCharsets.UTF_8);
 
         String endereco = "https://www.themealdb.com/api/json/v1/1/search.php?s=" + receita;
-
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder(URI.create(endereco)).build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        in.close();
 
         System.out.println(response.body());
     }
