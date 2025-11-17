@@ -18,7 +18,5 @@ public class LeituraArquivo {
         } catch (FileNotFoundException e){
             System.out.println("Arquivo não encontrado!");
         }
-
-
     }
 }
