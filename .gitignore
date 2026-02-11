@@ -33,3 +33,5 @@ bin/
 
 ### Other ###
 *.txt
+*json
+*.log
