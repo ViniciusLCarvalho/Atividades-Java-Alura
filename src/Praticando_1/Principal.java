@@ -11,24 +11,33 @@ public class Principal {
         Planos p = new Planos(150.0);
         Numeros n = new Numeros(7);
         Moeda m = new Moeda(451.50, 5.25);
+        ConsumoVeiculo cv = new ConsumoVeiculo(12.5, 50, 20, 200);
 
-        System.out.println("Nome: "+dp.nome()+"\n"
-        +"Idade: "+dp.idade()+"\n"
-        +"Altura: "+dp.altura()+"\n"
-        +"É estudante: "+dp.isEstudante());  
+        System.out.println("Nome: " + dp.nome() + "\n"
+                + "Idade: " + dp.idade() + "\n"
+                + "Altura: " + dp.altura() + "\n"
+                + "É estudante: " + dp.isEstudante());
         System.out.println(x);
-        System.out.println("A quantidade de "+e.Produto()+" em estoque é de "+(int)e.quantidade()+" kg.");
+        System.out.println("A quantidade de " + e.Produto() + " em estoque é de " + (int) e.quantidade() + " kg.");
         System.out.println(x);
-        System.out.println("A média das notas é: "+b.calculaMédia());
+        System.out.println("A média das notas é: " + b.calculaMédia());
         System.out.println(x);
-        System.out.println("A temperatura em graus Fahrenheit é: "+c.conversor());
+        System.out.println("A temperatura em graus Fahrenheit é: " + c.conversor());
         System.out.println(x);
-        System.out.println("Livro cadastrado: \"" + l.titulo() + "\", de " + l.autor() + ". Ele possui " + l.paginas() + " páginas, custa R$" + l.preco() + " e pertence à categoria " + l.cadastraLivro() + ".");
+        System.out.println("Livro cadastrado: \"" + l.titulo() + "\", de " + l.autor() + ". Ele possui " + l.paginas()
+                + " páginas, custa R$" + l.preco() + " e pertence à categoria " + l.cadastraLivro() + ".");
         System.out.println(x);
-        System.out.println("Categoria do produto: "+p.categorizaPlanos());
+        System.out.println("Categoria do produto: " + p.categorizaPlanos());
         System.out.println(x);
-        System.out.println("O valor é "+n.parOuImpar());
+        System.out.println("O valor é " + n.parOuImpar());
         System.out.println(x);
-        System.out.println("O valor em dolares é: "+m.converteCambio());
+        System.out.println("O valor em dolares é: " + m.converteCambio());
+        System.out.println(x);
+        System.out.println("Autonomia Máxima do veiculo: " + cv.calculaAutonomiaMax() + " km");
+        System.out.println("Autonomia atual: " + cv.calculaAutonomiaAtual() + " km");
+        System.out.println((cv.calculaAutonomiaAtual() >= cv.distanciaViagem())
+                ? "Você conseguirá completar a viagem sem precisar abastecer."
+                : "Você não conseguirá completar a viagem sem abastecer.");
+        System.out.println(x);
     }
 }
