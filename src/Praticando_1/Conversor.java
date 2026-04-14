@@ -1,4 +1,4 @@
-package Praticando;
+package Praticando_1;
 
 public record Conversor(int celsius) {
 

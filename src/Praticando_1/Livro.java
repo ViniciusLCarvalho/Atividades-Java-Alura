@@ -1,4 +1,4 @@
-package Praticando;
+package Praticando_1;
 
 public record Livro(String titulo, String autor, int paginas, double preco, char categoria) {
 
@@ -14,7 +14,7 @@ public record Livro(String titulo, String autor, int paginas, double preco, char
             case 'H':
                 return DescricaoCategoria.HISTORIA;
             default:
-                return DescricaoCategoria.NENHUMA;
+                return DescricaoCategoria.INVALIDA;
         }
     }
 }
