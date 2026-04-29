@@ -1,8 +1,5 @@
 package Praticando_2;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public record Num(int val1, int val2) {
     public void verificaNumMaior() {
 

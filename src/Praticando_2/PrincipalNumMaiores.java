@@ -8,6 +8,7 @@ public class PrincipalNumMaiores {
 
         System.out.println("Insira dois numeros para verificar qual deles é o maior: ");
         Num n = new Num(x.nextInt(), x.nextInt());
+        x.close();
 
         n.verificaNumMaior();
     }
