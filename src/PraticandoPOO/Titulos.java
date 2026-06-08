@@ -1,8 +1,8 @@
 package PraticandoPOO;
 
 public class Titulos {
-    String titulo;
-    int diasDeAtraso;
+    private String titulo;
+    private int diasDeAtraso;
 
     public Titulos(String titulo, int diasDeAtraso){
         this.titulo = titulo;

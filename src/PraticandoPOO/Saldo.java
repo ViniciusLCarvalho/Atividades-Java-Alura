@@ -1,7 +1,7 @@
 package PraticandoPOO;
 
 public class Saldo {
-    double saldo;
+    private double saldo;
 
     public Saldo(double saldo){
         this.saldo = saldo;

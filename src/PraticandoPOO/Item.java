@@ -1,9 +1,9 @@
 package PraticandoPOO;
 
 public class Item {
-    String nome;
-    double preco;
-    int quantidade;
+    private String nome;
+    private double preco;
+    private int quantidade;
 
     public String getNome() {
         return nome;

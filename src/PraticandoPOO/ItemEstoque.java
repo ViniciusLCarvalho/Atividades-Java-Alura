@@ -1,8 +1,8 @@
 package PraticandoPOO;
 
 public class ItemEstoque {
-    String nome;
-    int quantidade;
+    private String nome;
+    private int quantidade;
 
     public ItemEstoque(String nome, int quantidade){
         this.nome = nome;

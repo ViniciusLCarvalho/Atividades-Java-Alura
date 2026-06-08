@@ -1,9 +1,9 @@
 package PraticandoPOO;
 
 public class Cadastro {
-    String nome;
-    String cargo;
-    int nivelAcesso;
+    private String nome;
+    private String cargo;
+    private int nivelAcesso;
 
     public Cadastro(String nome, String cargo, int nivelAcesso){
         this.nome = nome;

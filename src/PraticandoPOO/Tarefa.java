@@ -1,8 +1,8 @@
 package PraticandoPOO;
 
 public class Tarefa {
-    String descricao;
-    boolean concluida;
+    private String descricao;
+    private boolean concluida;
 
     public Tarefa(String descricao, boolean concluida) {
         this.descricao = descricao;

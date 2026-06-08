@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Carrinho {
-    List<Item> carrinho = new ArrayList<>();
-    double total = 0;
+    private List<Item> carrinho = new ArrayList<>();
+    private double total = 0;
 
     void adicionar(Item i){
         carrinho.add(i);

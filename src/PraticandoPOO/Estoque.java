@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Estoque {
-    List<Item> estoque = new ArrayList<>();
+    private List<Item> estoque = new ArrayList<>();
 
     void adicionar(Item i){
         estoque.add(i);
