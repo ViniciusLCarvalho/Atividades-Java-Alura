@@ -1,0 +1,13 @@
+package PraticandoHerancaPolimorfismoInterfaces;
+
+public class SaqueA extends OperacaoBancaria{
+
+    public SaqueA(double valor) {
+        super(valor);
+    }
+    
+    @Override
+    public void executar(){
+        System.out.printf("Saque de R$%.2f realizado\n", valor);
+    }
+}
