@@ -7,10 +7,21 @@ Este repositório contém exercícios e projetos desenvolvidos durante os cursos
 As atividades estão organizadas cobrindo conceitos fundamentais e intermediários de Java:
 
 - ✅ Sintaxe básica
+- 📊 Variáveis, tipos de dados e operadores
 - 🔄 Estruturas de controle
+- 🔁 Laços de repetição
+- 📅 Manipulação de datas, horários e fusos
 - 🧮 Orientação a Objetos (POO)
+- 🔒 Encapsulamento
+- 🧬 Herança
+- 🎭 Polimorfismo
+- 🔌 Interfaces
+- 🛒 Simulações de e-commerce e carrinho de compras
+- 💳 Exemplos de pagamentos, operações bancárias e notificações
 - 📦 Pacotes e organização
+- ⚠️ Tratamento de exceções
 - 🗃️ Manipulação de arquivos
+- 🧾 Conversão e serialização com JSON/Gson
 - 🌐 Consumo de APIs
 
 ## 🚀 Como executar
