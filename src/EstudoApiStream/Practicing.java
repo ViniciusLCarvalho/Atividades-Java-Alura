@@ -12,20 +12,38 @@ public class Practicing {
                 new Produto("Cabo HDMI", new BigDecimal("45.00"), true),
                 new Produto("Headset", new BigDecimal("250.00"), false));
 
-        /*
-         * Desafio adicional
-         *
-         * List<Produto> produtosFiltrados = produtos.stream()
-         * .filter(produto -> produto.isDisponivel()
-         * && produto.getPreco().compareTo(new BigDecimal("500.00")) < 0)
-         * .toList();
-         */
-
+        // 1ª sessão prática
         List<Produto> produtosFiltrados = produtos.stream()
                 .filter(produto -> produto.isDisponivel())
                 .filter(produto -> produto.getPreco().compareTo(new BigDecimal("500.00")) < 0)
                 .toList();
 
         produtosFiltrados.forEach(System.out::println);
+
+        // Desafio adicional
+        List<Produto> produtosFiltradosComFiltroUnico = produtos.stream()
+                .filter(produto -> produto.isDisponivel()
+                        && produto.getPreco().compareTo(new BigDecimal("500.00")) < 0)
+                .toList();
+
+        produtosFiltradosComFiltroUnico.forEach(System.out::println);
+
+        // 2ª sessão prática
+        List<String> descricoes = produtos.stream()
+                .filter(Produto::isDisponivel)
+                .filter(produto -> produto.getPreco().compareTo(new BigDecimal("500.00")) < 0)
+                .map(produto -> produto.getNome().toUpperCase()
+                        + " - R$ "
+                        + produto.getPreco())
+                .toList();
+
+        descricoes.forEach(System.out::println);
+        // Desafio adicional
+        List<String> produtosIndisponiveis = produtos.stream()
+                .filter(produto -> !produto.isDisponivel())
+                .map(Produto::getNome)
+                .toList();
+
+        produtosIndisponiveis.forEach(System.out::println);
     }
 }
