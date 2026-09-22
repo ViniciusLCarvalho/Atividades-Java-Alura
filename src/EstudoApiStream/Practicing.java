@@ -3,6 +3,7 @@ package EstudoApiStream;
 import java.math.BigDecimal;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 public class Practicing {
         public static void main(String[] args) {
@@ -64,5 +65,47 @@ public class Practicing {
                                 .toList();
 
                 produtosPorPrecoDecrescente.forEach(System.out::println);
+
+                // 4ª sessão
+                BigDecimal limite = new BigDecimal("500.00");
+
+                BigDecimal valorTotal = produtos.stream()
+                                .filter(Produto::isDisponivel)
+                                .filter(produto -> produto.getPreco().compareTo(limite) < 0)
+                                .map(produto -> produto.getPreco())
+                                .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+                System.out.println("Valor total: " + valorTotal);
+
+                // Desafio adicional
+                BigDecimal valorTotalProdutosIndisponiveis = produtos.stream()
+                                .filter(produto -> !produto.isDisponivel())
+                                .map(produto -> produto.getPreco())
+                                .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+                System.out.println("Valor total dos produtos indisponiveis: " + valorTotalProdutosIndisponiveis);
+
+                // 6ª sessão
+                Optional<Produto> maisBaratoDisponivel = produtos.stream()
+                                .filter(Produto::isDisponivel)
+                                .sorted(Comparator.comparing(Produto::getPreco))
+                                .findFirst();
+
+                maisBaratoDisponivel.ifPresentOrElse(produto -> System.out.println(
+                                produto.getNome() + " - R$ " + produto.getPreco()),
+                                () -> System.out.println("Nenhum produto disponivel"));
+
+                buscarPorNome(produtos, "monitor")
+                                .ifPresentOrElse(produto -> System.out.println("Encontrado: " + produto),
+                                                () -> System.out.println("Produto não encontrado"));
+        }
+
+        // Desafio adicional 6ª sessão
+        public static Optional<Produto> buscarPorNome(List<Produto> produtos, String nome) {
+                Optional<Produto> produtoEncontrado = produtos.stream()
+                                .filter(produto -> produto.getNome().equalsIgnoreCase(nome))
+                                .findFirst();
+
+                return produtoEncontrado;
         }
 }
