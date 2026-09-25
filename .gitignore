@@ -27,7 +27,6 @@ bin/
 
 ### VS Code ###
 .vscode/
-.agents/
 
 ### Mac OS ###
 .DS_Store
@@ -36,3 +35,4 @@ bin/
 *.txt
 *json
 *.log
+*.code-workspace
